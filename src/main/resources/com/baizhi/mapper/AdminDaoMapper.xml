@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.dao.AdminDao">
+
+    <!--findByUserName-->
+    <select id="findByUserName" parameterType="String" resultType="admin">
+        select * from admin where username=#{username}
+    </select>
+
+    <!--regist-->
+    <insert id="regist" parameterType="admin">
+        insert into admin(username,name,password,sex) values (#{username},#{name},#{password},#{sex})
+    </insert>
+
+</mapper>
